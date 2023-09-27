@@ -1,0 +1,75 @@
+// BOTON DATOS ALUMNO => Deberia devolver la tabla de alumnos con los datos personales de cada alumno (nombre, apellido, dni).
+const btnDate = () => {
+
+    bodyTableAlumnos.
+        bodyTable
+
+    body
+    innerHTML = ''; // Borrar cualquier dato anterior en la tabla
+
+    alumnos.
+
+
+
+
+        forEach((alumno) => {
+            const { nombre, apellido, dni } = alumno; // Extrayendo los datos relevantes
+
+
+
+            // Creación de filas de tablas y celdas para cada alumno
+            const row = document.createElement('tr');
+            const cellNombre = document.createElement('td');
+            const cellApellido = document.createElement('td');
+            const cellDni = document.createElement('td');
+
+
+
+            // Asignación de datos a las celdas de la tabla
+            cellNombre.textContent = nombre;
+            cellApellido.
+                cell
+            textContent = apellido;
+            cellDni.
+                cellDni
+            textContent = dni;
+
+            // Agregar celdas a la fila
+            row.appendChild(cellNombre);
+            row.
+
+                appendChild(cellApellido);
+            row.appendChild(cellDni);
+
+
+
+            // Agregar la fila al cuerpo de la tabla
+            bodyTableAlumnos.appendChild(row);
+        });
+};
+
+
+
+
+// BOTON PROMEDIOS => Deberia devolver la tabla de alumnos con el promedio de cada alumno, este consta en 3 notas (examen1, examen2, examen3).
+const btnPromedios = () => {
+    bodyTableAlumnos.innerHTML = ''; // Borrar datos de tablas existentes
+    thridColumn.textContent = 'Promedio'; // Establecer el título de la tercera columna
+    addColumn = true; // Establezca agregar columna en verdadero ya que lo necesitamos ahora
+    // Función para calcular la media de tres exámenes
+    function calculatePromedio(examen1, examen2, examen3) {
+        return (examen1 + examen2 + examen3) / 3;
+    }
+
+    // Función para mostrar la tabla con los promedios de los alumnos
+    //function btnPromedios() {
+
+
+    alumnos.forEach(alumno => {
+        const promedio = calculatePromedio(alumno.examen1, alumno.examen2, alumno.examen3);
+        alumno.promedio = promedio; //Agregue la propiedad promedio al objeto alumno
+
+        const row = createRow(alumno);
+        bodyTableAlumnos.appendChild(row);
+    });
+}
